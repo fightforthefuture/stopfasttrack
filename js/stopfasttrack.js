@@ -65,7 +65,7 @@ var LogoCloudItemController = Composer.Controller.extend({
         window.removeEventListener('scroll',scroll_listeners[model.get('name')]);
 
         var img = new Image();
-        img.src = '/images/orgs/'+model.get('name')+'.png';
+        img.src = 'images/orgs/'+model.get('name')+'.png';
         img.onload = function() {
             var div = document.createElement('div');
             div.style.width = model.get('img_width') + 'px';
@@ -210,7 +210,7 @@ var OrgModal = BaseModalController.extend({
         
         var img = document.createElement('img');
         img.className = 'logo';
-        img.src = '/images/orgs/'+this.model.get('name')+'.png';
+        img.src = 'images/orgs/'+this.model.get('name')+'.png';
         div.appendChild(img);
 
         var h2 = document.createElement('h2');
