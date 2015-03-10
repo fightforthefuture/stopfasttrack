@@ -1,0 +1,492 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* --- end public domain code --- */
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: -moz-scrollbars-vertical;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 30px;
+}
+input, button {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    color: #378F3A;
+}
+a:hover {
+    color: #72BC75;
+}
+strong {
+    font-weight: bold;
+}
+header {
+    width: 100%;
+    background: #fff url(../images/site/background.jpg) center top repeat-x;
+    margin-bottom: 1.5em;
+}
+
+header .cta {
+    padding-top: 380px;
+}
+header .cta .action {
+    margin: 0px auto;
+    max-width: 685px;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #F6F6F6;
+    border-top: 9px solid #E68614;
+    border-bottom: 15px solid #D9D9D9;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .7);
+}
+header .cta .action h1 {
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.1em;
+    text-align: center;
+    margin-bottom: 1.2em;
+}
+header .cta .action h1 strong {
+    display: block;
+}
+header .cta .action p {
+    margin-bottom: 1.2em;
+    line-height: 1.3em;
+}
+header .cta .action p.disclaimer {
+    margin-bottom: 0px;
+    font-size: .8em;
+    color: gray;
+}
+header .cta .action input {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 0em 1.2em;
+    font-size: 1.2em;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    vertical-align: top;
+}
+header .cta .action button {
+    display: inline-block;
+    border-top: 1px solid #73a839;
+    border-bottom: 1px solid #59822c;
+    border-left: 1px solid #73a839;
+    border-right: 1px solid #73a839;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0em 1.2em;
+    background: #88c149;
+    font-size: 1.2em;
+    color: white;
+    vertical-align: top;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+    background: #88c149; /* Old browsers */
+    background: -moz-linear-gradient(top, #88c149 0%, #699934 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#88c149), color-stop(100%,#699934)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #88c149 0%,#699934 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #88c149 0%,#699934 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #88c149 0%,#699934 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #88c149 0%,#699934 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c149', endColorstr='#699934',GradientType=0 ); /* IE6-9 */
+}
+header .cta .action button:hover {
+    background: #73a839;
+}
+header .cta .action form {
+    margin-bottom: 1.2em;
+}
+header .cta .action form.call input {
+    width: 66%;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+header .cta .action form.call button {
+    width: 33%;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+div.sections section {
+    padding: 30px 0px;
+    text-align: center;
+}
+div.sections section h2, h3, p {
+    max-width: 960px;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 1.2em;
+    line-height: 1.2em;
+    padding: 0px 10px;
+}
+div.sections section h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+div.sections section h2 em {
+    display: block;
+    font-weight: normal;
+}
+div.sections section:nth-child(odd) {
+    background: #fff;
+}
+div.sections section:nth-child(even) {
+    background: #eee;
+}
+
+div.action_bar {
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: white;
+    z-index: 9001;
+}
+div.action_bar .fftf {
+    display: block;
+    width: 258px;
+    height: 33px;
+    background-image: url(https://s3.amazonaws.com/fftf-cms/static/campaign/img/logo.png);
+    background-position: left bottom;
+}
+div.action_bar .donate {
+    margin-top: 2px;
+    float: right;
+    display: block;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #c4a63a;
+    height: 30px;
+    box-sizing: border-box;
+    line-height: 27px;
+    color: #4d3a0b;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #fadb62; /* Old browsers */
+    background: -moz-linear-gradient(top, #fadb62 0%, #d1b243 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fadb62), color-stop(100%,#d1b243)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fadb62 0%,#d1b243 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fadb62 0%,#d1b243 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fadb62 0%,#d1b243 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fadb62 0%,#d1b243 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fadb62', endColorstr='#d1b243',GradientType=0 ); /* IE6-9 */
+}
+div.action_bar a.social {
+    float: right;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+a.social {
+    display: inline-block;
+    padding: 0px 10px 0px 40px;
+    height: 30px;
+    line-height: 27px;
+    position: relative;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-shadow: 0px -1px 0px transparent, 0px -1px 0px rgba(5, 5, 5, 0.4);
+}
+
+a.social::before {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: transparent url("https://s3.amazonaws.com/fftf-cms/static/campaign/img/share.png") no-repeat scroll 0px 0px / 170px 20px;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    content: "";
+}
+a.social.facebook {
+    border: 1px solid #3b5898;
+    background: #4064ac; /* Old browsers */
+    background: -moz-linear-gradient(top, #4064ac 0%, #30497d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4064ac), color-stop(100%,#30497d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4064ac 0%,#30497d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4064ac 0%,#30497d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4064ac 0%,#30497d 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #4064ac 0%,#30497d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4064ac', endColorstr='#30497d',GradientType=0 ); /* IE6-9 */
+}
+a.social.twitter {
+    border: 1px solid #0898cc;
+    background: #01caf9; /* Old browsers */
+    background: -moz-linear-gradient(top, #01caf9 0%, #0898cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01caf9), color-stop(100%,#0898cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #01caf9 0%,#0898cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #01caf9 0%,#0898cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #01caf9 0%,#0898cc 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #01caf9 0%,#0898cc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01caf9', endColorstr='#0898cc',GradientType=0 ); /* IE6-9 */
+}
+div.action_bar .donate:hover {
+    background: #dfbe46;
+}
+div.action_bar .social.facebook:hover {
+    background: #3b5898;
+    text-shadow: none;
+}
+div.action_bar .social.twitter:hover {
+    background: #0898cc;
+    text-shadow: none;
+}
+div.action_bar .social.facebook::before {
+    background-position: -150px 0px;
+}
+div.action_bar .social.twitter::before {
+    background-position: -100px 0px;
+}
+
+.org {
+    display: none;
+    margin: 5px 15px 5px 15px;
+}
+.org b {
+    display: none;
+}
+.org div.img {
+    cursor: pointer;
+    background-color: #fff;
+    -webkit-transition: background-color 1s linear;
+    -moz-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear;
+    -o-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+}
+.org div.img.invisible {
+    background-color: #eee;
+}
+.org div.img > div {
+    opacity: 1;
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -ms-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+.org div.img > div.invisible {
+    opacity: 0;
+}
+
+ul.orgs {
+    list-style-type: none;
+}
+ul.orgs li {
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    z-index: 9001;
+
+    -webkit-transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out;
+}
+.overlay.invisible {
+    pointer-events: none;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out;
+}
+.overlay .gutter {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+
+    -webkit-transition: margin-top 0.4s ease-out;
+            transition: margin-top 0.4s ease-out;
+}
+.overlay.invisible .gutter {
+    margin-top: -100%;
+}
+.overlay .gutter .modal {
+    display: inline-block;
+    max-width: 600px;
+    background: white;
+    color: black;
+    margin: 0px auto;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+
+    margin-top: 50px;
+    border-radius: 10px;
+    /*
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    */
+
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, .3);
+
+}
+
+.overlay .gutter .modal img.logo {
+    display: block;
+    margin: 0px auto .5em auto;
+}
+.overlay .gutter .modal h2 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1.2em;
+    color: gray;
+}
+.overlay .gutter .modal h3 {
+    font-weight: bold;
+    margin-bottom: 1.2em;
+}
+.overlay .gutter .modal a.close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: black;
+    opacity: .4;
+    text-decoration: none;
+    font-size: 30px;
+}
+.overlay .gutter .modal a.close:hover {
+    opacity: .6;
+}
+
+
+@media only screen and (max-width: 767px) {
+    header {
+        width: 100%;
+        background-size: 500% auto;
+    }
+    header .cta {
+       padding-top:280px;
+    }
+    header .cta .action {
+        padding: 12px 8px;
+    }
+    header .cta .action h1 strong {
+        display: inline;
+    }
+    header .cta .action form.call input {
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    header .cta .action form.call button {
+        display: block;
+        margin: 0px auto;
+        width: 66%;
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    div.sections section h2 {
+        font-size: 1.5em;
+    }
+    div.sections section h2 em {
+        display: inline;
+    }
+    div.action_bar {
+        padding: 10px 10px;
+        position: static;
+    }
+    div.action_bar .donate {
+        margin-top: 0px;
+        padding: 0px 2px;
+        font-size: .9em;
+    }
+    div.action_bar .social {
+        margin-top: 0px;
+        padding-right: 0px;
+    }
+    div.action_bar .social em {
+        display: none;
+    }
+    div.action_bar .social::before {
+        left: 10px;
+    }
+    div.action_bar .fftf {
+        display: block;
+        width: 129px;
+        height: 17px;
+        background-image: url(https://s3.amazonaws.com/fftf-cms/static/campaign/img/logo.png);
+        background-position: left top;
+        margin: 6px 0px;
+    }
+    .overlay .gutter .modal {
+        margin-top: 0px;
+    }
+}
