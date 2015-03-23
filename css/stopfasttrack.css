@@ -14,6 +14,12 @@ blockquote:before, blockquote:after,
 q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 /* --- end public domain code --- */
+.clear:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clear {display: inline-block;}
+/* hide IE mac \*/
+* html .clear {height: 1%;}
+.clear {display: block;}
+/* */
 html {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -21,7 +27,7 @@ html {
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 input, button {
     font-family: 'Montserrat', sans-serif;
@@ -31,6 +37,10 @@ a {
 }
 a:hover {
     color: #72BC75;
+}
+a.dark {
+    color: #333;
+    font-weight: bold;
 }
 strong {
     font-weight: bold;
@@ -55,6 +65,19 @@ header .cta .action {
     border-bottom: 15px solid #D9D9D9;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .7);
+    opacity: 1;
+
+    -webkit-transition: opacity .5s linear;
+    -moz-transition: opacity .5s linear;
+    -ms-transition: opacity .5s linear;
+    -o-transition: opacity .5s linear;
+    transition: opacity .5s linear;
+}
+header .cta .action.hidden {
+    display: none;
+}
+header .cta .action.invisible {
+    opacity: 0;
 }
 header .cta .action h1 {
     font-weight: bold;
@@ -84,6 +107,9 @@ header .cta .action input {
     box-sizing: border-box;
     border-radius: 5px;
     vertical-align: top;
+}
+header .cta .action input.error {
+    background: #fdd;
 }
 header .cta .action button {
     display: inline-block;
@@ -116,6 +142,32 @@ header .cta .action button:hover {
 header .cta .action form {
     margin-bottom: 1.2em;
 }
+header .cta .action form.email {
+    padding: 10px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
+    background: url(https://s3.amazonaws.com/fftf-cms/static/campaign/img/noteright.jpg);
+}
+header .cta .action form.email input {
+    width: 24%;
+    -moz-box-shadow:    inset 0 1px 5px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .2);
+    box-shadow:         inset 0 1px 5px rgba(0, 0, 0, .2);
+}
+header .cta .action form.email button {
+    display: block;
+    margin: 10px auto;
+}
+header .cta .action form.email textarea {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 0px 30px;
+    background: transparent;
+    border: none;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
 header .cta .action form.call input {
     width: 66%;
     -webkit-border-top-right-radius: 0px;
@@ -146,18 +198,39 @@ header .cta .action form.call button {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+header .cta .action div.thanks { 
+    margin-bottom: 1.2em;
+    display: none;
+}
+header .cta .action div.thanks h1 {
+    margin-bottom: .2em;
+}
 
 div.sections section {
     padding: 30px 0px;
     text-align: center;
 }
-div.sections section h2, h3, p {
+h2, h3, p {
     max-width: 960px;
     margin: 0px auto;
     text-align: center;
     margin-bottom: 1.2em;
     line-height: 1.2em;
     padding: 0px 10px;
+}
+p {
+    color: #444;
+}
+p.big {
+    color: black;
+    font-size: 1.2em;
+}
+p.small {
+    font-size: .8em;
+}
+div.sections section p.left {
+    text-align: left;
+    margin: 0px 0 1.2em 0;
 }
 div.sections section h2 {
     font-size: 2em;
@@ -172,6 +245,37 @@ div.sections section:nth-child(odd) {
 }
 div.sections section:nth-child(even) {
     background: #eee;
+}
+div.sections section.side_image {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+div.sections section.side_image div.content {
+    float: right;
+    box-sizing: border-box;
+    width: 70%;
+    padding-left: 30px;
+}
+div.sections section.side_image div.image {
+    float: left;
+    width: 30%;
+}
+div.sections section.side_image div.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul.bulleted {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+ul.bulleted li {
+    text-align: left;
+    line-height: 1.6em;
+    
+}
+ul.strong li {
+    color: #000;
 }
 
 div.action_bar {
@@ -190,11 +294,12 @@ div.action_bar .fftf {
     display: block;
     width: 258px;
     height: 33px;
-    background-image: url(https://s3.amazonaws.com/fftf-cms/static/campaign/img/logo.png);
+    background-image: url(../images/site/logo.png);
     background-position: left bottom;
 }
 div.action_bar .donate {
     margin-top: 2px;
+    margin-right: 5px;
     float: right;
     display: block;
     padding: 0px 10px 0px 10px;
@@ -217,9 +322,10 @@ div.action_bar .donate {
 div.action_bar a.social {
     float: right;
     margin-top: 2px;
-    margin-left: 10px;
 }
 a.social {
+    margin-left: 5px;
+    margin-right: 5px;
     display: inline-block;
     padding: 0px 10px 0px 40px;
     height: 30px;
@@ -275,10 +381,10 @@ div.action_bar .social.twitter:hover {
     background: #0898cc;
     text-shadow: none;
 }
-div.action_bar .social.facebook::before {
+.social.facebook::before {
     background-position: -150px 0px;
 }
-div.action_bar .social.twitter::before {
+.social.twitter::before {
     background-position: -100px 0px;
 }
 
@@ -406,6 +512,31 @@ ul.orgs li {
 .overlay .gutter .modal a.close:hover {
     opacity: .6;
 }
+.overlay .gutter .modal blockquote {
+    font-family: Georgia, serif;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    margin-bottom: 1.2em;
+    color: gray;
+}
+
+.video .embed {
+    max-width: 768px;
+    margin: 0px auto;
+}
+.video .embed .wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video .embed .wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
 @media only screen and (max-width: 767px) {
@@ -453,23 +584,48 @@ ul.orgs li {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
+    header .cta .action form.email input {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+    header .cta .action form.email textarea {
+        padding: 10px 10px;
+        border: 1px solid #ccc;
+        height: 120px;
+    }
     div.sections section h2 {
         font-size: 1.5em;
     }
     div.sections section h2 em {
         display: inline;
     }
+    div.sections section.side_image {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div.sections section.side_image div.content {
+        float: none;
+        width: 100%;
+        padding-left: 0px;
+    }
+    div.sections section.side_image div.image {
+        float: none;
+        width: 100%;
+    }
     div.action_bar {
         padding: 10px 10px;
         position: static;
     }
     div.action_bar .donate {
-        margin-top: 0px;
+        margin-top: 2px;
+        margin-right: 0px;
         padding: 0px 2px;
         font-size: .9em;
     }
     div.action_bar .social {
         margin-top: 0px;
+        margin-right: 0px;
         padding-right: 0px;
     }
     div.action_bar .social em {
@@ -490,3 +646,4 @@ ul.orgs li {
         margin-top: 0px;
     }
 }
+

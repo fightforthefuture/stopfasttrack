@@ -3,9 +3,26 @@
 <head>
     <meta charset="utf-8"> 
     <title>Stop Fast Track!</title>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/stopfasttrack.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="https://s3.amazonaws.com/fftf-cms/static/img/fav.ico">
+
+    <script type="text/javascript">
+
+        var TAG                 = 'stop-fast-track'; // for purpose and donation tracking
+        var CALL_CAMPAIGN       = 'stop-fast-track'; // used for call tool
+        var SITE_URL            = 'https://www.stopfasttrack.com'; // used for sharing
+        var TWEET_TEXT          = 'Stop Fast Track for the #TPP!';
+        
+        var CALL_MODAL_TITLE    = "We are calling you now!";
+        var CALL_MODAL_SUBTITLE = "We'll connect you with Congress. When they answer, be polite and say:"
+        var CALL_MODAL_SCRIPT   = "Hello, I'm calling to urge my representative to oppose Fast Track for the Trans-Pacific Partnership agreement. Congress needs time to debate and amend trade agreements that affect all of us. Fast Track is undemocratic, and I expect my lawmakers to oppose it now and into the future."
+
+        var POST_CALL_TITLE     = "Thanks for calling! Now can you email Congress?";
+        var POST_CALL_BLURB     = "Enter your info below and we'll send an email to your congresspeople on your behalf, asking them to oppose Fast Track for TPP."
+
+    </script>
+
 </head>
 <body>
     <div class="action_bar">
@@ -24,6 +41,7 @@
                 <p>
                     Congress is pushing legislation right now that would "Fast Track"
                     the Trans-Pacific Partnership&mdash;a secretive agreement negotiated behind closed doors by government bureaucrats and more than 600 corporate lobbyists. It threatens everything you care about: democracy, jobs, the environment, and the Internet.
+                    <a href="#video">[Learn More]</a>
                 </p>
                 <p>
                     Enter your phone number below. You'll get a call from us. We'll tell you what to say and connect you to your reps!
@@ -33,10 +51,43 @@
                     /><button>Call Congress</button>
                 </form>
                 <p>
-                    Can't call? <a href="#">Send an email!</a>
+                    Can't call? <a href="#" class="email">Send an email!</a>
                 </p>
                 <p class="disclaimer">
                     Your phone number will only be used to make this call.
+                    <a href="https://www.fightforthefuture.org/privacy" target="_blank">
+                        Privacy Policy
+                    </a>
+                </p>
+            </div>
+            <div class="action email hidden invisible">
+                <h1>
+                    Congress: Don't betray democracy!
+                    <strong>No "Fast Track" for the TPP!</strong>
+                </h1>
+                <p class="blurb">
+                    Congress is pushing legislation right now that would "Fast Track"
+                    the Trans-Pacific Partnership&mdash;a secretive agreement negotiated behind closed doors by government bureaucrats and more than 600 corporate lobbyists. It threatens everything you care about: democracy, jobs, the environment, and the Internet.
+                    <a href="#video">[Learn More]</a>
+                </p>
+                <form class="email">
+                    <input type="text" name="first_name" placeholder="Full Name"/>
+                    <input type="text" name="email" placeholder="Email"/>
+                    <input type="text" name="address1" placeholder="Address"/>
+                    <input type="text" name="zip" placeholder="Zip Code"
+                    /><button>Write Congress</button>
+                    <textarea>"I'm writing to urge my representatives to oppose Fast Track for the Trans-Pacific Partnership agreement. Congress needs time to debate and amend trade agreements that affect all of us. Fast Tracking the TPP is undemocratic, and I expect my lawmakers to oppose it. I'll be watching this issue closely in 2015."</textarea>
+                </form>
+                <div class="thanks">
+                    <img src="images/site/heart.png" width="40" height="40"/>
+                    <h1>Awesome! You rock!</h1>
+                    <p>Help us spread the word! Share this page with your friends!</p>
+                    <a class="social twitter" href="#">Tweet this</a>
+                    <a class="social facebook" href="#">Share this</a>
+                </div>
+                <p class="disclaimer">
+                    <a href="https://www.fightforthefuture.org">Fight for the Future</a>
+                    will contact you about future campaigns.
                     <a href="https://www.fightforthefuture.org/privacy" target="_blank">
                         Privacy Policy
                     </a>
@@ -796,6 +847,38 @@
             </div>
 
         </section>
+        <section id="video" class="video">
+            <h2>
+                Why do we need to stop Fast Track?
+            </h2>
+            <div class="embed">
+                <div class="wrapper">
+                    <iframe src="//www.youtube.com/embed/DnC1mqyAXmw" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="side_image clear">
+            <div class="content">
+                <h2>Who else opposes "Fast Track" legislation?</h2>
+                <p class="left">In a word, everyone. Democrats, Republicans, tech companies, unions, libertarians, environmentalists, and Internet freedom advocates all oppose Fast Tracking the TPP. It's common sense: decisions that affect everyone shouldn't be made in secret without public input.</p>
+                <p class="left">Below are blog posts and articles from many organizations who are rallying against Fast Track for the TPP. Read up, share, and get all the facts about what the Trans-Pacific Partnership means for you.</p>
+                <ul class="bulleted strong">
+                    <li>"7 reasons we don't want Fast Track trade deals," <a href="http://www.buzzfeed.com/aflcio/7-reasons-we-donat-want-afast-tracka-trade-d-ff8y" target="_blank">AFL-CIO</a></li>
+                    <li>"Leaked TPP Text Reveal a Bonanza of Special Rights for Corporations," <a href="http://www.citizenstrade.org/ctc/blog/2013/12/08/leaked-tpp-texts-reveal-bonanza-special-rights-corporations/" target="_blank">Citizens Trade Campaign</a></li>
+                    <li>"Trans-Pacific Free Trade Agreement," <a href="http://www.cwa-union.org/issues/entry/c/trans-pacific_free_trade_agreement#.UsmRFfaildg" target="_blank">Communications Workers of America</a></li>
+                    <li>"'Trade' Deal Would Elevate Corporations to Equal Status With Nation States", <a href="http://www.huffingtonpost.com/lori-wallach/trade-deal-would-elevate_b_4143626.html" target="_blank">Public Citizen</a></li>
+                    <li>"Congress Must Not Fast Track TPP to Ratification", <a href="https://www.eff.org/deeplinks/2013/10/congress-must-not-fast-track-tpp-ratification" target="_blank">Electronic Frontier Foundation</a></li>
+                    <li>"Congress Must Vet the TPP", <a href="http://teamster.org/magazine/2013/summer/congress-must-vet-tpp" target="_blank">Teamsters</a></li>
+                    <li>"Trans-Pacific Partnership Will Undermine Democracy, Empower Transnational Corporations", <a href="http://www.truth-out.org/news/item/15353-transpacific-partnership-will-undermine-democracy-empower-transnational-corporations" target="_blank">PopularResistance.org</a></li>
+                    <li>"TPP: A Fast Track to Internet Censorship?", <a href="https://openmedia.org/blog/tpp-fast-track-internet-censorship" target="_blank">OpenMedia</a></li>
+                    <li>"Congress: Don't Put Harmful Trade Pacts on the Fast Track", <a href="http://www.huffingtonpost.com/ilana-solomon/tpp-fast-track_b_4571271.html" target="_blank">Sierra Club</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="images/site/crowd.jpg"/>
+            </div>
+
+        </section>
         <section>
             <h2>
                 More than 100 organizations oppose Fast Track.
@@ -812,6 +895,16 @@
                 <!-- no need to do it twice :) -->
                 <div id="org_list"></div>
             </p>
+        </section>
+        <section>
+            <p>Much respect to <a href="http://ran.org/" target="_blank">Rainforest Action Network</a> for the photo source.</p>
+            <p class="big">
+                Media contact, Fitzgibbon Media<br/>
+                Email: <a href="mailto:christina@fitzgibbonmedia.org">christina@fitzgibbonmedia.org</a><br/><br/>
+                Phone: 202.716.1953
+            </p>
+            <p class="small">~<br/>A project of <a class="dark" href="https://www.fightforthefuture.org" target="_blank">Fight for the Future</a>. No copyright intended.</p>
+
         </section>
     </div>
     <script type="text/javascript" src="js/composer-1.1.6.2.min.js"></script>
