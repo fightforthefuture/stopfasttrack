@@ -347,7 +347,6 @@ var CallActionController = Composer.Controller.extend({
         var data = new FormData();
         data.append('campaignId', CALL_CAMPAIGN);
         data.append('userPhone', this.validate_phone(phone));
-        data.append('zipcode', '55419'); // JL HACK ~
 
         var url = 'https://call-congress.fightforthefuture.org/create';
 
@@ -477,7 +476,7 @@ var CallActionModal = BaseModalController.extend({
 // -----------------------------------------------------------------------------
 
 /**
-    CallToolController: Calls Congress
+    EmailActionController: Emails Congress
 **/
 var EmailActionController = Composer.Controller.extend({
     elements: {
@@ -547,7 +546,6 @@ var EmailActionController = Composer.Controller.extend({
 
         var url = 'https://queue.fightforthefuture.org/action';
 
-        /*
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
@@ -556,7 +554,6 @@ var EmailActionController = Composer.Controller.extend({
         }.bind(this);
         xhr.open("post", url, true);
         xhr.send(data);
-        */
 
         this.title.style.display = 'none';
         this.blurb.style.display = 'none';
