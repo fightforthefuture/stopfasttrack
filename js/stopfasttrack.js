@@ -7,8 +7,6 @@ var scroll_listeners = {};
 **/
 var Org = Composer.Model.extend({});
 
-// -----------------------------------------------------------------------------
-
 /**
     Orgs Collection: store a collection of Org models, and sort by org_name
 **/
@@ -19,8 +17,6 @@ var OrgsCollection = Composer.Collection.extend({
         return a.get('org_name').localeCompare(b.get('org_name'));
     },
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     LogoCloudItemController: Shows a logo cloud organization. Only loads the
@@ -105,8 +101,6 @@ var LogoCloudItemController = Composer.Controller.extend({
     }
 });
 
-// -----------------------------------------------------------------------------
-
 /**
     OrgListController: Shows a list of organizations.
 **/
@@ -133,8 +127,6 @@ var OrgListController = Composer.ListController.extend({
         this.html(ul);
     }
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     OrgListItemController: Shows an item in the OrgListController list of orgs.
@@ -165,8 +157,6 @@ var OrgListItemController = Composer.Controller.extend({
         new OrgModal({ model: this.model });
     }
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     BaseModalController: Provides common functionality for modals. All modals
@@ -217,8 +207,6 @@ var BaseModalController = Composer.Controller.extend({
         
     }
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     OrgModal: Shows a modal for an organization when the user clicks in the logo
@@ -290,8 +278,6 @@ var OrgModal = BaseModalController.extend({
     }
 });
 
-// -----------------------------------------------------------------------------
-
 /**
     ActionBarController: Provides events for the action bar (already rendered).
 **/
@@ -319,8 +305,6 @@ var ActionBarController = Composer.Controller.extend({
         window.open('https://twitter.com/intent/tweet?text='+txt)
     }
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     CallActionController: Calls Congress
@@ -391,8 +375,6 @@ var CallActionController = Composer.Controller.extend({
         }.bind(this), 500);
     }
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     CallActionModal: Shows instructions for calling Congress
@@ -472,8 +454,6 @@ var CallActionModal = BaseModalController.extend({
     }
 
 });
-
-// -----------------------------------------------------------------------------
 
 /**
     EmailActionController: Emails Congress
