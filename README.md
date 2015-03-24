@@ -93,7 +93,7 @@ Here are the steps for adding a new organization:
 2. Resize it down to 80 pixels height using PhotoShop. If the scaled image is
    wider than 290 pixels, scale it to 290 pixels width. The maximum size is
    290x80 pixels.
-3. Save the image to 1images/orgs/orgname.png1 -- Make a note of what orgname is
+3. Save the image to `images/orgs/orgname.png` -- Make a note of what orgname is
    and keep it simple, lowercase.
 4. Copy the entire `<div class="org fftf"> ... </div>` block and paste at the
    bottom of this group of organizations.
