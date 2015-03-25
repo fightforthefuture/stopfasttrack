@@ -466,6 +466,7 @@ var EmailActionController = Composer.Controller.extend({
         'input[name=email]': 'email',
         'input[name=address1]': 'address1',
         'input[name=zip]': 'zip',
+        'input[name=subject]': 'subject',
         'textarea': 'action_comment',
         'div.thanks': 'thanks',
         'form': 'form'
