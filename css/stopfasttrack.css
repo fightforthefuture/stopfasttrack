@@ -398,6 +398,7 @@ div.action_bar .social.twitter:hover {
 .org div.img {
     cursor: pointer;
     background-color: #fff;
+    background-repeat: no-repeat;
     -webkit-transition: background-color 1s linear;
     -moz-transition: background-color 1s linear;
     -ms-transition: background-color 1s linear;
