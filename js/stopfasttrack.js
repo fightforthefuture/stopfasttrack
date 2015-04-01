@@ -79,7 +79,7 @@ var LogoCloudItemController = Composer.Controller.extend({
             div.style.height = IMG_HEIGHT + 'px';
             div.style.backgroundImage = 'url('+img.src+')';
             div.style.backgroundSize = 'auto '+this.IMG_HEIGHT+'px';
-            div.className = 'invisible'
+            div.className = 'invisible';
             this.img.appendChild(div);
             setTimeout(function() {
                 div.className = '';
@@ -215,10 +215,7 @@ var BaseModalController = Composer.Controller.extend({
 var OrgModal = BaseModalController.extend({
 
     events: {
-        'click a.close': 'click_close'
-    },
-
-    events: {
+        'click a.close': 'click_close',
         'click a.twitter': 'tweet'
     },
 
@@ -226,7 +223,7 @@ var OrgModal = BaseModalController.extend({
 
     init: function() {
         this.render();
-        this.show()
+        this.show();
     },
 
     render: function() {
@@ -274,7 +271,7 @@ var OrgModal = BaseModalController.extend({
     tweet: function(e) {
         e.preventDefault();
         var txt= encodeURIComponent(this.model.get('tweet_text')+' '+SITE_URL);
-        window.open('https://twitter.com/intent/tweet?text='+txt)
+        window.open('https://twitter.com/intent/tweet?text='+txt);
     }
 });
 
@@ -302,7 +299,7 @@ var ActionBarController = Composer.Controller.extend({
     tweet: function(e) {
         e.preventDefault();
         var txt = encodeURIComponent(TWEET_TEXT+' '+SITE_URL);
-        window.open('https://twitter.com/intent/tweet?text='+txt)
+        window.open('https://twitter.com/intent/tweet?text='+txt);
     }
 });
 
@@ -382,17 +379,14 @@ var CallActionController = Composer.Controller.extend({
 var CallActionModal = BaseModalController.extend({
 
     events: {
-        'click a.close': 'click_close'
-    },
-
-    events: {
+        'click a.close': 'click_close',
         'click a.twitter': 'tweet',
         'click a.facebook': 'share'
     },
 
     init: function() {
         this.render();
-        this.show()
+        this.show();
     },
 
     render: function() {
@@ -429,7 +423,7 @@ var CallActionModal = BaseModalController.extend({
         a.className = 'social facebook';
         a.href = '#';
         a.textContent = 'Share this';
-        div.appendChild(a);        
+        div.appendChild(a);
 
         overlay.firstChild.appendChild(div);
 
@@ -444,7 +438,7 @@ var CallActionModal = BaseModalController.extend({
     tweet: function(e) {
         e.preventDefault();
         var txt = encodeURIComponent(TWEET_TEXT+' '+SITE_URL);
-        window.open('https://twitter.com/intent/tweet?text='+txt)
+        window.open('https://twitter.com/intent/tweet?text='+txt);
     },
 
     before_hide: function() {
@@ -496,7 +490,7 @@ var EmailActionController = Composer.Controller.extend({
         var add_error = function(el) {
             el.className = 'error';
             error = true;
-        }
+        };
 
         if (!this.first_name.value) add_error(this.first_name);
         if (!this.email.value) add_error(this.email);
@@ -550,7 +544,7 @@ var EmailActionController = Composer.Controller.extend({
     tweet: function(e) {
         e.preventDefault();
         var txt = encodeURIComponent(TWEET_TEXT+' '+SITE_URL);
-        window.open('https://twitter.com/intent/tweet?text='+txt)
+        window.open('https://twitter.com/intent/tweet?text='+txt);
     }
 });
 
