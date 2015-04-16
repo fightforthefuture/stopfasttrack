@@ -410,6 +410,7 @@ div.action_bar .social.twitter:hover {
 }
 .org div.img > div {
     opacity: 1;
+    background-repeat: no-repeat;
     -webkit-transition: opacity 1s linear;
     -moz-transition: opacity 1s linear;
     -ms-transition: opacity 1s linear;

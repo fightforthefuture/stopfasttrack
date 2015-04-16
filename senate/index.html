@@ -24,7 +24,7 @@
     var TWEET_TEXT          = "Stop Fast Track for the #TPP!";
     
     var CALL_MODAL_TITLE    = "We are calling you now!";
-    var CALL_MODAL_SUBTITLE = "We'll connect you with the Senate. When they answer, be polite and say:"
+    var CALL_MODAL_SUBTITLE = "We'll connect you with a key senator who is still deciding how to vote.  (This might not be your own senator.) When they answer, please be polite and say:"
     var CALL_MODAL_SCRIPT   = "Hello, I'm calling to urge the Senator to oppose Fast Track for the Trans-Pacific Partnership agreement. The Senate needs time to debate and amend trade agreements that affect all of us. Fast Track is undemocratic, and I expect my lawmakers to oppose it now and into the future."
 
     var POST_CALL_TITLE     = "Thanks for calling! Now can you email the Senate?";
@@ -55,15 +55,13 @@
                 <a href="#video">[Learn More]</a>
             </p>
             <p>
-                Enter your phone number below. You'll get a call from us. We'll tell you what to say and connect you to a Senator!
+                Enter your phone number below. You'll get a call from us. We'll give you a script you can use and connect you to a key senator who's still deciding how to vote.  (This might not be your own senator.)
             </p>
             <form class="call">
                 <input type="text" id="userPhone" placeholder="555-555-5555"
                 /><button>Call a Senator</button>
             </form>
-            <p>
-                Can't call? <a href="#" class="email">Send an email!</a>
-            </p>
+
             <p class="disclaimer">
                 Your phone number will only be used to make this call.
                 <a href="https://www.fightforthefuture.org/privacy" target="_blank">
@@ -73,38 +71,15 @@
         </div>
 
         <div class="action email hidden invisible">
-            <h1>
-                Senate: Don't betray democracy!
-                <strong>No "Fast Track" for the TPP!</strong>
-            </h1>
-            <p class="blurb">
-                The Senate is pushing legislation right now that would "Fast Track"
-                the Trans-Pacific Partnership&mdash;a secretive agreement negotiated behind closed doors by government bureaucrats and more than 600 corporate lobbyists. It threatens everything you care about: democracy, jobs, the environment, and the Internet.
-                <a href="#video">[Learn More]</a>
-            </p>
-            <form class="email">
-                <input type="text" name="first_name" placeholder="Full Name"/>
-                <input type="text" name="email" placeholder="Email"/>
-                <input type="text" name="address1" placeholder="Address"/>
-                <input type="text" name="zip" placeholder="Zip Code"
-                /><button>Write the Senate</button>
-                <input type="hidden" name="subject" value="Please oppose Fast Track for the Trans-Pacific Partnership"/>
-                <textarea>"I'm writing to urge the Senator to oppose Fast Track for the Trans-Pacific Partnership agreement. Congress needs time to debate and amend trade agreements that affect all of us. Fast Tracking the TPP is undemocratic, and I expect my lawmakers to oppose it. I'll be watching this issue closely in 2015."</textarea>
-            </form>
-            <div class="thanks">
+            <!-- not actually an email capture, just sharing instead -->
+
+            <div class="share">
                 <img src="/images/site/heart.png" width="40" height="40"/>
                 <h1>Awesome! You rock!</h1>
                 <p>Help us spread the word! Share this page with your friends!</p>
                 <a class="social twitter" href="#">Tweet this</a>
                 <a class="social facebook" href="#">Share this</a>
             </div>
-            <p class="disclaimer">
-                <a href="https://www.fightforthefuture.org">Fight for the Future</a>
-                will contact you about future campaigns.
-                <a href="https://www.fightforthefuture.org/privacy" target="_blank">
-                    Privacy Policy
-                </a>
-            </p>
         </div>
     </div>
 </header>
