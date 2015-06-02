@@ -604,10 +604,12 @@ new ActionBarController({
     el: document.querySelector('.action_bar')
 });
 
-var call_controller = new CallActionController({
-    el: document.querySelector('.action.call')
-});
-
 var email_controller = new EmailActionController({
     el: document.querySelector('.action.email')
 });
+
+var call_controller = new CallActionController({
+    el: document.querySelector('.action.call')
+});
+if (window.location.href.indexOf('email=1') !== -1)
+    call_controller.show_email_action();
