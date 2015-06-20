@@ -51,6 +51,141 @@ header {
     margin-bottom: 1.5em;
 }
 
+#cta {
+    background: #000;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    padding: 0 16px 30px;
+    text-align: center;
+    width: 100%;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#cta h1 {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+#cta h2 {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+#cta p {
+    max-width: 950px;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 29px;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+}
+#cta form {
+    margin: 0px auto;
+    max-width: 800px;
+}
+#cta input {
+    display: inline-block;
+    width: 25%;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    
+}
+#cta strong.urgent {
+    color: yellow;
+}
+
+@media screen and (max-width: 767px) {
+    #cta input {
+        display: block;
+        width: 100%;
+    }
+}
+
+#cta input.error {
+    background: #ecc;
+}
+#cta .thanks h2 {
+    margin-bottom: 0px;
+}
+#cta button {
+    box-sizing: border-box;
+    height: 50px;
+    border: 0px none transparent;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0px 15px;
+    background-color: #cc0000;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+#cta button:hover {
+    background-color: #aa0000;
+}
+#cta a {
+    font-weight: 500;
+    color: white;
+}
+#cta p.disclosure {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#targets {
+    text-align: center;
+    margin: 0px auto;
+    max-width: 900px;
+}
+#targets > div {
+    display: inline-block;
+    margin: 0px 5px 15px 5px;
+}
+#targets > div .img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+#targets > div h4 {
+    box-sizing: border-box;
+    width: 200px;
+    background: black;
+    color: white;
+    padding: 3px 5px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+#targets > div ul li {
+    padding: 2px 0px;
+}
+#targets > div ul li a {
+    color: #ff8;
+    font-size: 14px;
+}
+
+
+
 header .cta {
     padding-top: 380px;
 }

@@ -548,6 +548,139 @@ var EmailActionController = Composer.Controller.extend({
     }
 });
 
+/**
+    SenatorController: Shows a senator
+**/
+var SenatorController = Composer.Controller.extend({
+
+    events: {
+        'click a.tw': 'tweet',
+        'click h4': 'tweet',
+        'click .img': 'tweet'
+    },
+
+    inject: '#targets',
+    data: null,
+
+    init: function() {
+        this.render();
+    },
+
+    render: function() {
+        var div = $c('div');
+
+        var img = $c('div');
+        img.style.background ='url(congress/'+this.data.image+') center center';
+        img.style.backgroundSize = '100% auto';
+        img.className = 'img';
+        div.appendChild(img);
+
+        var h4 = $c('h4');
+        h4.textContent = this.data.name+' ('+this.data.party+')';
+        div.appendChild(h4);        
+
+        var ul = $c('ul');
+        var li1 = $c('li');
+        var a1 = $c('a');
+        a1.href = 'tel://'+this.data.phone;
+        a1.textContent = this.data.phone;
+        li1.appendChild(a1);
+        ul.appendChild(li1);
+        var li2 = $c('li');
+        var a2 = $c('a');
+        a2.href = 'https://twitter.com/'+this.data.twitter;
+        a2.className = 'tw';
+        a2.textContent = '@'+this.data.twitter;
+        li2.appendChild(a2);
+        ul.appendChild(li2);
+        div.appendChild(ul);
+       
+        this.html(div);
+    },
+
+    tweet: function(e) {
+        e.preventDefault();
+        var txt = encodeURIComponent('.@'+this.data.twitter+', please vote NO on #FastTrack for #TPP! If you vote yes, I pledge to not support your re-election. '+SITE_URL);
+        window.open('https://twitter.com/intent/tweet?text='+txt);
+    }
+
+});
+
+/**
+    SenatePetitionController: Last-ditch petition to stop the TPP
+**/
+var SenatePetitionController = Composer.Controller.extend({
+    elements: {
+        'input[name=first_name]': 'first_name',
+        'input[name=email]': 'email',
+        'input[name=address1]': 'address1',
+        'input[name=zip]': 'zip',
+        'input[name=subject]': 'subject',
+        'div.thanks': 'thanks',
+        'form': 'form'
+    },
+
+    events: {
+        'submit form': 'submit',
+        'click a.twitter': 'tweet',
+        'click a.facebook': 'share',
+    },
+
+
+    submit: function(e) {
+        e.preventDefault();
+        console.log('submit');
+
+        var error = false;
+
+        var add_error = function(el) {
+            el.className = 'error';
+            error = true;
+        };
+
+        if (!this.first_name.value) add_error(this.first_name);
+        if (!this.email.value) add_error(this.email);
+        if (!this.address1.value) add_error(this.address1);
+        if (!this.zip.value) add_error(this.zip);
+
+        if (error) return alert('Please fill out all fields :)');
+
+        var data = new FormData();
+        data.append('guard', '');
+        data.append('hp_enabled', true);
+        data.append('member[first_name]', this.first_name.value);
+        data.append('member[email]', this.email.value);
+        data.append('member[street_address]', this.address1.value);
+        data.append('member[postcode]', this.zip.value);
+        data.append('tag', 'tpa-last-ditch-petition');
+
+        var url = 'https://queue.fightforthefuture.org/action';
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                console.log('response:', xhr.response);
+            }
+        }.bind(this);
+        xhr.open("post", url, true);
+        xhr.send(data);
+
+        this.form.style.display = 'none';
+        this.thanks.style.display = 'block';
+    },
+
+    share: function(e) {
+        e.preventDefault();
+        window.open('https://www.facebook.com/sharer/sharer.php?u='+SITE_URL);
+    },
+
+    tweet: function(e) {
+        e.preventDefault();
+        var txt = encodeURIComponent('Hours left to stop the #TPP. Tell your Senator: "if you vote for #FastTrack, I will vote against your re-election." '+SITE_URL);
+        window.open('https://twitter.com/intent/tweet?text='+txt);
+    }
+});
+
 
 // -----------------------------------------------------------------------------
 // Actual functionality starts here :)
@@ -613,3 +746,68 @@ var call_controller = new CallActionController({
 });
 if (window.location.href.indexOf('email=1') !== -1)
     call_controller.show_email_action();
+
+var targets = [
+    {
+        name: 'Michael Bennet',
+        twitter: 'senbennetco',
+        phone: '202-224-5852',
+        image: 'cobennetmichaelf.jpg',
+        party: 'D-CO'
+    },
+    {
+        name: 'Tom Carper',
+        twitter: 'senatorcarper',
+        phone: '202-224-2441',
+        image: 'decarperthomasr.jpg',
+        party: 'D-DE'
+    },
+    {
+        name: 'Chris Coons',
+        twitter: 'chriscoons',
+        phone: '202-224-5042',
+        image: 'decoonschristophera.jpg',
+        party: 'D-DE'
+    },
+    {
+        name: 'Ben Cardin',
+        twitter: 'senatorcardin',
+        phone: '202-224-4524',
+        image: 'mdcardinbenjaminl.jpg',
+        party: 'D-MD'
+    },
+    {
+        name: 'Heidi Heitkamp',
+        twitter: 'senatorheitkamp',
+        phone: '202-224-2043',
+        image: 'ndheitkampheidi.jpg',
+        party: 'D-ND'
+    },
+    {
+        name: 'Jeanne Shaheen',
+        twitter: 'senatorshaheen',
+        phone: '202-224-2841',
+        image: 'nhshaheenjeanne.jpg',
+        party: 'D-NH'
+    },
+    {
+        name: 'Ron Wyden',
+        twitter: 'ronwyden',
+        phone: '202-224-5244',
+        image: 'orwydenron.jpg',
+        party: 'D-OR'
+    },
+    {
+        name: 'Mark Warner',
+        twitter: 'markwarner',
+        phone: '202-224-2023',
+        image: 'vawarnermarkr.jpg',
+        party: 'D-VA'
+    },
+];
+for (var i = 0; i < targets.length; i++)
+    new SenatorController({data: targets[i]});
+
+var senate_petition_controller = new SenatePetitionController({
+    el: document.querySelector('#last_ditch_petition')
+});
