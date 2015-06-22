@@ -62,6 +62,9 @@ header {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+#cta.light {
+    background: #fff;
+}
 #cta h1 {
     font-weight: 500;
     color: white;
@@ -73,6 +76,9 @@ header {
     max-width: 1000px;
     margin: 0px auto;
 }
+#cta.light h1 {
+    color: black;
+}
 #cta h2 {
     font-weight: 500;
     color: white;
@@ -82,6 +88,9 @@ header {
     line-height: 40px;
     letter-spacing: 2px;
 }
+#cta.light h2 {
+    color: #222;
+}
 #cta p {
     max-width: 950px;
     text-align: center;
@@ -90,6 +99,9 @@ header {
     font-size: 20px;
     color: white;
     margin-bottom: 25px;
+}
+#cta.light p {
+    color: #222;
 }
 #cta form {
     margin: 0px auto;
@@ -109,6 +121,19 @@ header {
 #cta strong.urgent {
     color: yellow;
     font-size: 1.1em;
+}
+#cta #petition_link {
+    margin-top: 25px;
+    display: inline-block;
+    background: #fe9;;
+    padding: 20px;
+    max-width: 850px;
+    border: 3px solid black;
+}
+#cta #petition_link a {
+    color: #33f;
+    font-size: 1.5em;
+    line-height: 1.6em;
 }
 
 @media screen and (max-width: 767px) {
@@ -180,9 +205,13 @@ header {
 #targets > div ul li {
     padding: 2px 0px;
 }
+
 #targets > div ul li a {
     color: #ff8;
     font-size: 14px;
+}
+#cta.light #targets > div ul li a {
+    color: #33f;
 }
 
 
